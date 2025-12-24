@@ -1,0 +1,84 @@
+Day 34:
+=========
+
+Polymorphism in Python:
+=======================
+Python supports Polymorphism. Poly means many and morphism means forms in 
+Python we can implement using following methodology
+
+
+->overloading
+         ->An operator overloading
+         ->Method overloading
+         ->Constructor overloading
+->overriding
+        ->Method overriding
+        ->Constructor overriding
+
+Ex1:
+=====
+
+import time 
+class I_HUB_AA_STORE:
+    def __init__(self,items):
+        self.items=items 
+i1=I_HUB_AA_STORE(265)
+print(i1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+=====
+
+import time 
+class I_HUB_AA_STORE:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return "Number of items in i1 is:"+str(self.items)
+i1=I_HUB_AA_STORE(265)
+print(i1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+===
+import time 
+class I_HUB_AA_STORE:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+i1=I_HUB_AA_STORE(265)
+print("Number of items in i1 is:",i1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+class I_HUB_AA_STORE:
+    def __init__(self,items):
+        self.items=items 
+    def __str__(self):
+        return str(self.items)
+    def __add__(self,other):
+        return self.items+other.items
+
+i1=I_HUB_AA_STORE(265)
+print("Number of items in i1 is:",i1)
+print()
+i2=I_HUB_AA_STORE(195)
+print("Number of items in i1 is:",i2)
+print()
+print("Sum is:",i1+i2)
+print()
+time.sleep(2)
+print("End of an application")
+
